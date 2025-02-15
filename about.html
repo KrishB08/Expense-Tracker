@@ -1,0 +1,241 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+        #box1 {
+            height: 40px;
+            width: 40px;
+            background-color: white;
+            border-right: 5px solid rgb(135, 222, 200);
+            border-bottom: 5px solid rgb(135, 222, 200);
+            float: left;
+            border-radius: 40px 0px 0px 0px;
+            animation: colorChange1 3s 1 alternate;
+        }
+
+        #box2 {
+            height: 40px;
+            width: 40px;
+            background-color: white;
+            border-left: 5px solid rgb(135, 222, 200);
+            border-bottom: 5px solid rgb(135, 222, 200);
+            float: left;
+            border-radius: 0px 40px 0px 0px;
+            animation: colorChange2 3s 1 alternate;
+        }
+
+        #box3 {
+            height: 40px;
+            width: 40px;
+            background-color: white;
+            border-right: 5px solid rgb(135, 222, 200);
+            border-top: 5px solid rgb(135, 222, 200);
+            float: left;
+            border-radius: 0px 0px 0px 40px;
+            animation: colorChange3 3s 1 alternate;
+        }
+
+        #box4 {
+            height: 40px;
+            width: 40px;
+            background-color: white;
+            border-left: 5px solid rgb(135, 222, 200);
+            border-top: 5px solid rgb(135, 222, 200);
+            float: left;
+            border-radius: 0px 0px 40px 0px;
+            animation: colorChange4 3s 1 alternate;
+        }
+
+        #container_L {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            top: 200px;
+            left: 390px;
+            margin-right: 200px;
+        }
+
+        header {
+            height: 745px;
+            width: 101.5%;
+            background: #30d5c7;
+            position: relative;
+            margin-top: -19px;
+            margin-left: -10px;
+            text-align: center;
+        }
+
+        #scroll {
+            background: transparent;
+            padding: 5px;
+            border: none;
+            color: antiquewhite;
+            position: absolute;
+            top: 650px;
+            left: 670px;
+            font-size: 20px;
+            cursor: pointer;
+            font-family: capriola;
+        }
+
+        img:hover {
+            background: rgba(255, 255, 255, 0.219)
+        }
+
+        #scroll:hover {
+            animation: up 0.2s ease-in 1 alternate;
+            top: 640px;
+        }
+
+        @keyframes up {
+            0% {
+                top: 650px;
+                left: 670px;
+            }
+
+            100% {
+                top: 640px;
+                left: 670px;
+            }
+        }
+
+        #intro {
+            background: whitesmoke;
+            height: 101%;
+            width: 101.4%;
+margin-left:-8px;
+box-shadow: inset 10px 10px 20px rgba(0,0,0,0.4);
+
+        }
+
+        .ideas {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            margin: 20px;
+            position: relative; 
+            z-index:1;
+            background-color:rgba(128, 0, 128, 0.674);
+            color:white
+        }
+
+        .details {
+            position: absolute; 
+            opacity: 0;
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            color: antiquewhite;
+            transition: opacity 0.5s;
+            font-size:20px;
+            font-family:capriola;
+            z-index:3; 
+            overflow:hidden;
+        }
+
+        .ideas:hover .details {
+            opacity: 0.7;
+        }
+
+        .ideas:hover {
+            animation: sizing 1s 1;
+            height: 220px;
+            width: 220px;
+            color: transparent;
+        }
+
+        @keyframes sizing {
+            0% {
+                height: 200px;
+                width: 200px;
+            }
+
+            100% {
+                height: 220px;
+                width: 220px;
+            }
+        }
+
+        .details:hover {
+            opacity: 1;
+            height: 220px;
+            width: 220px;
+            animation: sizing_1 1s 1;
+        }
+
+        @keyframes sizing_1 {
+            0% {
+                height: 200px;
+                width: 200px
+            }
+
+            100% {
+                height: 220px;
+                width: 220px
+            }
+        }
+          </style>
+
+</head>
+
+<body>
+    <header>
+        <a href="innovative_assignment.html"><img src="pre.jpg"
+                style="height:30px;width:30px;position:absolute;top:50px;left:50px;"></a>
+        <br><br><br><br><br><br><bR><br><br><br>
+        <p style="color:antiquewhite;font-size:40px;font-family:capriola;">Capital Distributions</p>
+        <p style="color:white">____________________________________________________________________________________________________________________</p>
+
+        <div id="container_L">
+            <div id="box1"></div>
+            <div id="box2"></div>
+            <div id="box3"></div>
+            <div id="box4"></div>
+        </div>
+        <div class="ideas">    <p style="font-size:20px; position: absolute; top: 44%; left: 50%; transform: translate(-50%, -50%);font-family:capriola">Purpose</p>
+
+            <div class="details"><p>The main purpose to make this website is to keep the track of the expenses of an individual.</p></div>
+        </div>
+        <div class="ideas" style="background-color:rgba(0, 0, 255, 0.674);">  <p style="font-size:20px; position: absolute; top: 44%; left: 50%; transform: translate(-50%, -50%);font-family:capriola">Reference</p>           <div class="details"><p>The references to make this website were taken from various Youtube channels and some online examples.</p></div>
+    </div>
+        <div class="ideas" style="background-color:aqua;">          <p style="font-size:20px; position: absolute; top: 44%; left: 50%; transform: translate(-50%, -50%);font-family:capriola">Establishment</p>   <div class="details"><p>The company was established in April,2024.</p></div>
+    </div>
+        <div class="ideas" style="background-color:chocolate;">         <p style="font-size:20px; position: absolute; top: 44%; left: 50%; transform: translate(-50%, -50%);font-family:capriola">Vision</p>    <div class="details"><p> This website is created to make people understand the value of money and guide them for avoiding the extravegant purchases.</p></div>
+    </div>
+
+        <button id="scroll"> More Details</button>
+    </header>
+    <div id="intro">
+    <img src="capital.jpg" style="border-radius:20px;height:300px;width:300px;transform:translate(100px,50px);">
+
+<div style="height:fit-content;width:700px;transform:translate(500px,-220px);padding:10px;border-radius:20px;color:black;font-family:capriola;">Capital Distributors is a leading name in the financial sector, renowned for its innovative solutions and steadfast commitment to client success. With a rich history spanning decades, Capital Distributors has consistently delivered exceptional financial services tailored to meet the diverse needs of its clientele. From investment management to wealth planning, their team of seasoned experts provides personalized guidance and strategic insights to help individuals and businesses achieve their financial goals. Backed by a solid track record of reliability and integrity, Capital Distributors continues to be a trusted partner for those navigating the complexities of the financial landscape. Whether it's securing investments, managing assets, or planning for the future, clients rely on Capital Distributors for comprehensive and forward-thinking financial solutions.</div>
+<div style="height:fit-content;width:1200px;transform:translate(100px,-100px);padding:10px;border-radius:20px;color:black;font-family:capriola;">Capital Distributors was established by Raj and Krish, two dynamic entrepreneurs with extensive experience in investment banking and wealth management. Raj's expertise lies in investment banking, where his strategic insights drive Capital Distributors' investment strategies. Meanwhile, Krish's background in finance and economics equips him with the skills to offer tailored wealth management solutions. Together, their leadership forms the backbone of Capital Distributors, fostering a culture of innovation and excellence. With their unwavering commitment to integrity and client satisfaction, Raj and Krish continue to steer Capital Distributors toward unparalleled success in the finance industry.</div>
+
+
+
+
+
+
+
+
+</div>
+
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $('html,body').animate({
+                    scrollTop: $('#intro').offset().top
+                }, 1000)
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        header {
+            height: 70px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        #outside {
+            width: 600px;
+            height: 550px;
+            background-color: white;
+            border: 2px solid white;
+            margin-left: 450px;
+            margin-top: 70px;
+            border-radius: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        #login_form {
+            height: 360px;
+            width: 300px;
+            border: none;
+            border-radius: 10px;
+            margin-left: 250px;
+            padding: 15px;
+            font-size: 30px;
+        }
+
+        #login_form input {
+            height: 30px;
+            width: 80%;
+            margin-top: 20px;
+            margin-left: 30px;
+            border: none;
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: inset 0 0 10px #333;
+        }
+
+        #login_form button {
+            height: 30px;
+            width: 80%;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            margin-left: 30px;
+            border: none;
+            border-radius: 15px;
+            padding: 10px;
+            background-color: rgb(16, 184, 16);
+        }
+
+        #login_form a {
+            font-size: 15px;
+            margin-left: 70px;
+            color: rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+            padding-bottom: 30px;
+        }
+
+        #continue {
+            margin-left: 20px;
+            width: 250px;
+            height: 330px;
+            border-radius: 10px;
+        }
+
+        #continue img {
+            width: 50px;
+            height: 50px;
+            margin-left: 15px;
+            margin-top: 20px;
+        }
+
+        #box1 {
+            height: 40px;
+            width: 40px;
+            background-color: #333;
+            border-right: 5px solid white;
+            border-bottom: 5px solid white;
+            float: left;
+            border-radius: 40px 0px 0px 0px;
+            animation: colorChange1 3s 1 alternate;
+        }
+
+        #box2 {
+            height: 40px;
+            width: 40px;
+            background-color: #333;
+            border-left: 5px solid white;
+            border-bottom: 5px solid white;
+            float: left;
+            border-radius: 0px 40px 0px 0px;
+            animation: colorChange2 3s 1 alternate;
+        }
+
+        #box3 {
+            height: 40px;
+            width: 40px;
+            background-color: #333;
+            border-right: 5px solid white;
+            border-top: 5px solid white;
+            float: left;
+            border-radius: 0px 0px 0px 40px;
+            animation: colorChange3 3s 1 alternate;
+        }
+
+        #box4 {
+            height: 40px;
+            width: 40px;
+            background-color: #333;
+            border-left: 5px solid white;
+            border-top: 5px solid white;
+            float: left;
+            border-radius: 0px 0px 40px 0px;
+            animation: colorChange4 3s 1 alternate;
+        }
+
+        #main_box {
+            height: 90px;
+            width: 90px;
+            margin-top: -470px;
+            margin-left: 80px;
+            margin-bottom: 50px;
+            
+        }
+
+        #continue img:hover {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        #Menu_bar {
+            background: rgba(128, 128, 128, 0.5);
+            height: 300px;
+            width: 200px;
+            position: absolute;
+            top: 90px;
+            left: -300px;
+            border-radius: 20px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.7);
+        }
+
+        #transfer {
+            transform: translate(30px, -60px);
+            background: transparent;
+            font-size: 25px;
+            padding: 5px;
+            border: none;
+            font-family: capriola;
+            border-radius:10px;
+            transition:0.2s;
+
+        }
+        #transfer:hover{
+            box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        }
+       #Menu_bar ol li{
+        text-align: center;
+       }
+       #Menu_bar ol li a{
+        text-decoration: none;color:black;
+       }
+       #Menu_bar ol li a:hover{
+        color:white
+       }
+    </style>
+    <script>
+    $(document).ready(function(){
+    var menu = $("#Menu_bar");
+    $("#transfer").click(function(){
+        var menuPos = menu.offset().left;
+        if (menuPos === -300){
+            menu.animate({
+                left: 10
+            });
+        } else {
+            menu.animate({
+                left: -300
+            });
+        }
+    });
+});
+
+
+        function validate() {
+            var name = document.getElementById('user').value;
+            var pass = document.getElementById('pass').value;
+
+            if ((pass !== "Rr123456@" && name !== "raj") && (pass !== "Kk123456@" && name !== "krish")) {
+                alert("Either username or password is wrong");
+                return false;
+            }
+            if ((pass === "Rr123456@" && name === "raj") || (pass === "Kk123456@" && name === "krish")) {
+                window.open("tracker2.html");
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <p style="padding-left: 1100px; padding-top: 20px; font-family: capriola; font-size: 25px;">Capital Distribution</p>
+    <button id="transfer">Menu</button>
+</header>
+<div id="Menu_bar"><ol style="list-style-type:none;padding-left:0px;">
+
+<li><a href="innovative_assignment.html">Home</a></li>
+<li><hr></li>
+<li><a href="sign.html">Signup</a></li>
+<li><hr></li>
+<li><a href="contact1.html">Contact</a></li>
+<li><hr></li>
+</ol></div>
+<div id="outside">
+    <p style="color: #333; font-size: 30px; margin-top: 70px; margin-left: 375px; font-family: capriola;">Login</p>
+    <div id="login_form">
+        <input type="text" placeholder="raj" id="user" required>
+        <input type="password" placeholder="Rr123456@" id="pass" required>
+        <button onclick="validate()">Login</button>
+        <a href="saver.html">Forgot password/username ?</a>
+        <br><br><br><br><br>
+        <a href="sign.html">Create new account ?</a>
+    </div>
+    <div id="main_box">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+        <div id="box4"></div>
+    </div>
+    <div id="continue">
+        <p style="padding-top: 10px; padding-left: 20px; font-size: 25px; color: #333; font-family: capriola;">Continue with :</p>
+        <a href="https://www.facebook.com"><img src="facebook1.jpg"></a>
+        <a href="https://r.search.yahoo.com/_ylt=Awr.xLn9PR9mZgQAKqxXNyoA;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZAMEc2VjA3Nj/RV=2/RE=1714533117/RO=10/RU=https%3a%2f%2fwww.twitter.com/RK=2/RS=fN4ge8cxqMXx6gxUXGTJ3O8tqGU-"><img src="twit.jpg"></a>
+        <a href="https://r.search.yahoo.com/_ylt=AwrOtW_TPR9muQQAYgBXNyoA;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZAMEc2VjA3Nj/RV=2/RE=1714533076/RO=10/RU=https%3a%2f%2fwww.instagram.com%2f/RK=2/RS=fIKzzHvlJpajjFYSllfC9b1EOck-"><img src="insta.jpg"></a>
+    
+    </div>
+</div>
+</body>
+</html>

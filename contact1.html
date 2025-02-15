@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Contact</title>
+    <style>
+        header {
+            height: 70px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        #Menu_bar {
+            background: rgba(128, 128, 128, 0.5);
+            height: 300px;
+            width: 200px;
+            position: absolute;
+            top: 110px;
+            left: -300px;
+            border-radius: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+        }
+
+        #transfer {
+            transform: translate(30px, -60px);
+            background: transparent;
+            font-size: 25px;
+            padding: 5px;
+            border: none;
+            font-family: capriola;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+
+        #transfer:hover {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        #Menu_bar ol li {
+            text-align: center;
+        }
+
+        #Menu_bar ol li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #Menu_bar ol li a:hover {
+            color: white;
+        }
+
+        .contact {
+            width: 35%;
+            transform: translate(95%, 60px);
+            height: fit-content;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+            background-color: rgba(255, 235, 205, 0.589);
+            text-align: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .contact p {
+            font-family: capriola;
+            font-size: 20px;
+
+        }
+
+        .address {
+            width: 35%;
+            height: 80px;
+            transform: translate(100%, 130px);
+            display: block;
+            border-radius: 50px;
+            position: relative;
+            background-color: rgba(255, 235, 205, 0.589);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+            margin-top: 20px;
+            transition: 0.3s;
+            text-align:center;
+            justify-content: center;
+            padding-top:20px;
+        }
+        .address a {
+            text-decoration: none;
+            font-family:capriola;
+            font-size:20px;
+            color:black;
+
+        }
+        .address:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        }
+
+        #box1, #box2, #box3, #box4 {
+            height: 30px;
+            width: 30px;
+            background-color: rgb(135, 222, 200);
+            float: left;
+            border-radius: 30px;
+        }
+
+        #box1 {
+            border-right: 3.75px solid black;
+            border-bottom: 3.75px solid black;
+        }
+
+        #box2 {
+            border-left: 3.75px solid black;
+            border-bottom: 3.75px solid black;
+        }
+
+        #box3 {
+            border-right: 3.75px solid black;
+            border-top: 3.75px solid black;
+        }
+
+        #box4 {
+            border-left: 3.75px solid black;
+            border-top: 3.75px solid black;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var menu = $("#Menu_bar");
+            $("#transfer").click(function(){
+                var menuPos = menu.offset().left;
+                if (menuPos === -300){
+                    menu.animate({
+                        left: 10
+                    });
+                } else {
+                    menu.animate({
+                        left: -300
+                    });
+                }
+            });
+        });
+         
+    </script>
+</head>
+<body>
+<header>
+    <p style="padding-left: 1100px; padding-top: 20px; font-family: capriola; font-size: 25px;">Capital Distribution</p>
+    <button id="transfer">Menu</button>
+</header>
+<div class="contact">
+    <p>Email:</p>
+    <p>23bce141@nirmauni.ac.in</p>
+    <p>23bce149@nirmauni.ac.in </p>
+    <p>Mobile:</p>
+    <p>917840263</p>
+    <p>8320022563</p>
+</div>
+<div id="Menu_bar">
+    <ol style="list-style-type: none; padding-left: 0px;">
+        <li><a href="innovative_assignment.html">Home</a></li>
+        <li><hr></li>
+        <li><a href="sign.html">Signup</a></li>
+        <li><hr></li>
+        <li><a href="contact1.html">Contact</a></li>
+        <li><hr></li>
+    </ol>
+</div>
+<div class="address"><a href="https://www.google.co.in/maps/place/Nirma+University/data=!4m7!3m6!1s0x395e832f45125167:0x876cb1cb23c25bdb!8m2!3d23.1286792!4d72.5454424!16zL20vMGIwZjZk!19sChIJZ1ESRS-DXjkR21vCI8uxbIc?authuser=0&hl=en&rclk=1">Nirma University Sarkhej,Gandhinagar Highway.Gota,Ahmedabad.</a></div>
+<div class="address"><a href="https://www.google.co.in/maps/place/Ashadeep+IIT/data=!4m7!3m6!1s0x3be04f7aaafe64bf:0x8ccf6a98310ab7e5!8m2!3d21.2267218!4d72.8971922!16s%2Fg%2F11fkd0tcvw!19sChIJv2T-qnpP4DsR5bcKMZhqz4w?authuser=0&hl=en&rclk=1">Ashdeep Group of Schools, Varachha, Surat</a></div>
+</body>
+</html>

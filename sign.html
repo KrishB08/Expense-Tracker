@@ -1,0 +1,255 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous">
+
+    <title>sign up page</title>
+    <style>
+    header {
+        height:70px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    #Menu_bar {
+            background: rgba(128, 128, 128, 0.5);
+            height: 300px;
+            width: 200px;
+            position: absolute;
+            top: 90px;
+            left: -300px;
+            border-radius: 20px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.7);
+        }
+
+        #transfer {
+            transform: translate(30px, -60px);
+            background: transparent;
+            font-size: 25px;
+            padding: 5px;
+            border: none;
+            font-family: capriola;
+            border-radius:10px;
+            transition:0.2s;
+
+        }
+        #transfer:hover{
+            box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        }
+       #Menu_bar ol li{
+        text-align: center;
+       }
+       #Menu_bar ol li a{
+        text-decoration: none;color:black;
+       }
+       #Menu_bar ol li a:hover{
+        color:white
+       }
+
+        #box1 {
+            background-color: white;
+            height: fit-content;
+            width: 300px;
+            position: absolute;
+            top: 50%;
+            left: 21%;
+            border-radius: 30px;
+            border: 2px solid black;
+            padding: 10px;
+            transform: translate(70%, -50%);
+        }
+        #box2 {
+            background-color: white;
+            height: fit-content;
+            width: 300px;
+            position: absolute;
+            display:none; 
+            top: 50%;
+            left: 21%;
+            border-radius: 30px;
+            border: 2px solid black;
+            padding: 10px;
+            transform: translate(70%, -50%);
+        }
+
+        .login-form h1 {
+            text-align: center;
+        }
+
+        .login-form label {
+            display: block;
+            padding: 0.5rem 1rem;
+        }
+
+        .login-form input {
+            width: 100%;
+            border: none;
+            border-radius: 1rem;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 1rem 1.5rem;
+            background: #fff;
+            margin-bottom: 25px;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            padding: 10px;
+            font-family: capriola;
+            background-color: rgb(16, 184, 16);
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .login-form a {
+            text-decoration: none;
+            color: rgba(128, 128, 128, 0.838);
+            padding-left: 5px;
+            font-size: 15px;
+        }
+
+        .login-form a:hover {
+            color: #333;
+        }
+
+       
+        .login-form p{
+            padding-left:17px;
+            color:rgba(128, 128, 128, 0.838);
+        }
+        .login-form p:hover{
+            color: #333;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //  $(document).ready(function () {
+        //     $("#box1").slideDown(500);
+        // });
+        $(document).ready(function(){
+            $("#back").click(function(){
+                $("#box2").hide();
+
+                $("#box1").show();
+            });
+        });
+        $(document).ready(function(){
+    var menu = $("#Menu_bar");
+    $("#transfer").click(function(){
+        var menuPos = menu.offset().left;
+        if (menuPos === -300){
+            menu.animate({
+                left: 10
+            });
+        } else {
+            menu.animate({
+                left: -300
+            });
+        }
+    });
+});
+
+        function check() {
+            event.preventDefault();
+            var pass = document.getElementById('password').value;
+            var cnf = document.getElementById('cnfpass').value;
+            var name = document.getElementById('user').value;
+
+            // Check if required fields are filled
+            if (name.trim() === "" || pass.trim() === "" || cnf.trim() === "") {
+                alert("Please fill all required fields.");
+                return false;
+ }
+
+            // Example password validation
+            else if (!/^(?=.*[!@#$%^&*()])(?=.*[A-Z])(?=.*[a-z]).{8,}$/.test(pass)) {
+                alert("Please enter a password containing at least 8 characters, both uppercase and lowercase letters, and one special character.");
+                return false;
+            }
+
+            // Check if passwords match
+            else if (pass !== cnf) {
+                alert('Passwords do not match.');
+                return false;
+            }
+
+            // Hide the box after successful validation
+            $("#box1").css("display", "none");
+            // Prevent form submission (optional)
+            $("#box2").show();
+        }
+        function check2(){
+            event.preventDefault();
+
+            var email = document.getElementById('Email').value;
+            var mo = document.getElementById('monumber').value;
+            var male = document.getElementById('Male');
+            var female = document.getElementById('Female');
+            var gen_c = 0;
+
+            if (male.checked || female.checked) {
+                gen_c = 1;
+                }
+            if (parseInt(mo) > 9999999999 || parseInt(mo) < 1000000000) {
+                alert("Enter the correct mobile number.");
+                return false;
+                }
+            if ( email.trim() === "" ||  mo.trim() === "" || gen_c === 0) {
+                alert("Please fill the full form.");
+                return false;
+                }
+window.open("innovative_assignment1.html");        }
+    </script>
+</head>
+
+<body>
+    <header> 
+        <p style="padding-left: 1100px; padding-top: 20px; font-family: capriola; font-size: 25px;">Capital Distribution</p>
+        <button id="transfer">Menu</button>
+    </header>
+    <div id="Menu_bar"><ol style="list-style-type:none;padding-left:0px;">
+        <li><a href="innovative_assignment.html">Home</a></li>
+<li><hr></li>
+<li><a href="sign.html">Signup</a></li>
+<li><hr></li>
+<li><a href="contact1.html">Contact</a></li>
+<li><hr></li>
+</ol></div>
+    <div id="box1">
+        <form class="login-form">
+            <h1>Sign Up</h1>
+            <input type="text" placeholder="Enter the User Name" id="user" required><br>
+            <input type="password" id="password" placeholder="Enter Your Password">
+            <input type="password" id="cnfpass" placeholder="Confirm Password" required>
+            <button onclick="check()">Next</button>
+            <p><a href="login1.html">Already a user ?</a></p>
+        </form>
+    </div>
+    <div id="box2">
+        <form class="login-form">
+            <h1>Sign Up</h1>
+            <input type="password" id="Email"
+                placeholder="Enter Your Email" required>
+<input type="text" id="monumber"
+                placeholder="Enter Your number" required>
+                <label for="gender">Gender:</label>
+<h5 style="padding-left:20px">male:
+<input id="Male" type="radio" value="male" name="gender" style="box-shadow: none;  width: fit-content; height: inherit;position: relative;top: 3px; ">
+Female:
+<input id="Female" name="gender" type="radio" value="female"
+                style="box-shadow: none;  width: fit-content; height: inherit;position: relative;top: 3px; "></h5>
+                <button onclick="check2()">Submit</button>
+                <p><a href="login1.html">Already a user ?</a></p>
+                <p id="back">Back</p>        </form>
+    </div>
+</body>
+
+</html>

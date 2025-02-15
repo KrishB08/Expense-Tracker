@@ -1,0 +1,203 @@
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-image: url("wallpaper4.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position: top;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        .box1 {
+            height: 400px;
+            width: 80%;
+            position: relative;
+            margin-top: 10px;
+            margin-left: 10%;
+            background-color: hsla(0, 0%, 50%, 0);
+            opacity: 1;
+            animation-name: colorChange;
+            animation-duration: 4s;
+            animation-direction: alternate;
+        }
+
+        .box2 {
+            height: 200px;
+            position: relative;
+            margin-left: 10%; /* Corrected property name */
+            width: 80%;
+            margin-bottom:10px;
+            background-color: hsla(0, 0%, 50%, 0);
+            animation-name: change;
+            animation-duration: 4s;
+            animation-direction: alternate;
+        }
+     .box3{height:30px;text-align:center;color:rgb(135, 222, 200);width:70px;font-size:20px;}
+        @keyframes change {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    .box3:hover{background-color:rgb(135, 222, 200);color:black;border-radius:5px;border:1px solid black; }
+        @keyframes colorChange {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+  #box1{height:40px;width:40px;background-color:rgb(135, 222, 200);border-right : 10px solid black;border-bottom : 10px solid black;float:left;border-radius: 40px 0px 0px 0px;animation: colorChange1 3s 1 alternate;}
+  #box2{height:40px;width:40px;background-color:rgb(135, 222, 200);border-left : 10px solid black;border-bottom : 10px solid black;float:left;border-radius: 0px 40px 0px 0px;animation: colorChange2 3s 1 alternate;}
+  #box3{height:40px;width:40px;background-color:rgb(135, 222, 200);border-right : 10px solid black;border-top : 10px solid black;float:left;border-radius: 0px 0px 0px 40px;animation: colorChange3 3s 1 alternate;}
+  #box4{height:40px;width:40px;background-color:rgb(135, 222, 200);border-left : 10px solid black;border-top : 10px solid black;float:left;border-radius: 0px 0px 40px 0px;animation: colorChange4 3s 1 alternate; }
+    @keyframes colorChange1{0%{background-color: rgb(135, 222, 200);}25%{background-color: red;}50%{background-color: red;}75%{background-color: red;}100%{background-color: red;}}
+    @keyframes colorChange2{0%{background-color: rgb(135, 222, 200);}25%{background-color: rgb(135, 222, 200);}50%{background-color: blue;}75%{background-color: blue;}100%{background-color: blue;}}
+    @keyframes colorChange3{0%{background-color: rgb(135, 222, 200);}25%{background-color: rgb(135, 222, 200);}50%{background-color: rgb(135, 222, 200);}75%{background-color: rgb(135, 222, 200);}100%{background-color:green ;}}
+    @keyframes colorChange4{0%{background-color: rgb(135, 222, 200);}25%{background-color: rgb(135, 222, 200);}50%{background-color: rgb(135, 222, 200);}75%{background-color: yellow;}100%{background-color: yellow;}}
+
+  #box11{height:12px;width:12px;background-color:white;border-right : 3px solid black;border-bottom : 3px solid black;float:left;border-radius: 12px 0px 0px 0px;}
+  #box21{height:12px;width:12px;background-color:white;border-left : 3px solid black;border-bottom : 3px solid black;float:left;border-radius: 0px 12px 0px 0px;}
+  #box31{height:12px;width:12px;background-color:white;border-right : 3px solid black;border-top : 3px solid black;float:left;border-radius: 0px 0px 0px 12px;}
+  #box41{height:12px;width:12px;background-color:white;border-left : 3px solid black;border-top : 3px solid black;float:left;border-radius: 0px 0px 12px 0px;}
+ .slider-container {
+      width: 40%;
+      overflow: hidden;
+      position: relative;
+background-color: hsla(0, 0%, 50%, 0);
+
+height:400px;
+    }
+@keyframes changeP {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+    .slider {
+      margin-top:45px;
+      display: flex;
+      transition: transform 0.5s ease;
+      opacity:1;
+      animation-name: changeP;
+            animation-duration: 4s;
+            animation-direction: alternate;
+
+  
+    }
+
+    .slide {
+      min-width: 100%;
+    }
+
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 24px;
+      padding: 8px;
+      color: teal;
+    }
+     .op{position:absolute;top:45px;left:45%;width:54%;height:315px;background-color:rgb(135, 222, 200);animation-name: changeOP;opacity:1;
+            animation-duration: 4s;
+            animation-direction: alternate;
+color:white;
+}
+@keyframes changeOP {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+footer{
+ width:101.95%;
+ height:320px;
+ background-color:black;
+ position:relative;
+top:45%;
+left:-2%;
+ border-radius:0px;
+ animation-name: changefooter;
+ opacity:1;
+animation-duration: 4s;
+animation-direction: alternate;
+color:white;
+}
+@keyframes changefooter {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+#inside_footer{
+width:300px;
+position:absolute;
+left:67.3%;
+top:20px;
+padding:10px;
+font-size:20px;
+color:white;
+height:fit-content;
+}
+.img1:hover{box-shadow: 0px 0px 10px gray;}
+    </style>
+</head>
+<body>
+    <div class="box2"><div style="position:absolute;top:30px;left:20px;height:100px;width:100px;"><div id="box1"></div><div id="box2"></div><div id="box3"></div><div id="box4"></div></div> <p style="font-size:40px;font-family:capriola;color:white;position:absolute;top:20px;left:160px;">Capital Finance Distributers</p>
+    <a href="innovative_assignment.html"><div class="box3" style="position:absolute;top:75px;left:800px;">Home</div></a>
+    <a href="login1.html"><div class="box3" style="position:absolute;top:75px;left:890px;">Login</div></a>
+    <a href="sign.html"><div class="box3" style="position:absolute;top:75px;left:980px;">  Sign up </div></a> 
+    <a href="contact1.html"><div class="box3" style="position:absolute;top:75px;left:1070px;">  Contact </div></a><br><br><br><br><br><br><br><br><br><hr></div>
+    
+    <div class="box1"><div class="slider-container">
+  <div class="slider">
+    <div class="slide"><img src="steve1.jpg" style="width: 100%; height: 100%;" alt="Slide 1"></div>
+    <div class="slide"><img src="warren.webp" style="width: 100%; height: 100%;" alt="Slide 2"></div>
+    <div class="slide"><img src="bill.jpg" style="width: 100%; height: 100%;" alt="Slide 3"></div>
+  </div>
+  </div>
+<div class="op"><h1 style="font-family:capriola;padding-left:20px;">Capital</h1><p style="padding-left:20px;">__________________________________________________________________________</p>
+<p style="font-family:capriola;padding-left:20px;">Welcome to Capital – your premier destination for all your financial needs. With personalized <br>solutions and expert guidance, we're dedicated to helping you navigate the world of finance <br>effortlessly. Trust us to provide tailored strategies and support to help you achieve your<br> financial goals efficiently.</p></div>
+
+</div>
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const slider = document.querySelector('.slider');
+
+function showSlide(index) {
+    if (index < 0) {
+        slideIndex = slides.length - 1;
+    } else if (index >= slides.length) {
+        slideIndex = 0;
+    }
+    const translateValue = -slideIndex * 100;
+    slider.style.transform = `translateX(${translateValue}%)`;
+}
+
+function prevSlide() {
+    showSlide(--slideIndex);
+}
+
+function nextSlide() {
+    showSlide(++slideIndex);
+}
+
+// Show the initial slide
+showSlide(slideIndex);
+
+// Automatically advance slides every 3 seconds
+setInterval(nextSlide, 3000);
+</script>
+
+<footer>
+
+   <div style="height:203px;width:820px;position:absolute;top:20px;left:11%;"><br><p style="color:rgb(135, 222, 200);font-size:18px;font-family:capriola;padding-left:10px">Email:<font style="color:white"> 23bce141@nirmauni.ac.in, 23bce148@nirmauni.ac.in</font><br><br>Mobile:<font style="color:white"> 9157840263 , 9725118359</font><br><br>Office-Time:<font style="color:white"> 9:00 AM TO 7:00 PM</font></p></div>
+    <div id="inside_footer"><p style="text-align:center;font-family:capriola">Continue with</p><a href="https://www.facebook.com"><img src="facebook1.jpg" style="float:right;height:30px;width:30px;margin-right:85px" class="img1"></a>
+        <a href="https://r.search.yahoo.com/_ylt=Awr.xMX00hpmgJkIkW1XNyoA;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZAMEc2VjA3Nj/RV=2/RE=1714243577/RO=10/RU=https%3a%2f%2fwww.twitter.com/RK=2/RS=4ky41h8y8ZLlh_O2OFr.UJo_QyI-"><img src="twit.jpg" style="float:right;height:30px;width:30px;margin-right:20px" class="img1"></a>
+        <a href="https://r.search.yahoo.com/_ylt=AwrjcDNF0xpmL9UHG_pXNyoA;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1714243653/RO=10/RU=https%3a%2f%2fwww.youtube.com%2f/RK=2/RS=MTcbI3n4F7eUox8DMFhOgDdx8zc-"><img src="youtube.jpg" style="float:right;height:30px;width:30px;margin-right:20px" class="img1"></a>
+    <br><p style="text-align:center;font-family:capriola">Explore</p><a href="about.html"><div class="img1" style="float:right;margin-right:130px;height:30px;width:30px;"><div id="box11"></div><div id="box21"></div><div id="box31"></div><div id="box41"></div></div></a></div><br><br><br><br><br><br><br><br><br><br><br><br><p style="text-align:center">________________________________________________________________________________________________________________________________________________</p><p style="text-align:center;color:gray">@Capital India LTD all rights reserved </p></footer>
+</body>
+</html>

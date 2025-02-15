@@ -1,0 +1,204 @@
+<html>
+    <head>
+        <title>Saver</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <script>
+             $(document).ready(function(){
+    var menu = $("#Menu_bar");
+    $("#transfer").click(function(){
+        var menuPos = menu.offset().left;
+        if (menuPos === -300){
+            menu.animate({
+                left: 10
+            });
+        } else {
+            menu.animate({
+                left: -300
+            });
+        }
+    });
+});
+
+            function validate1(){
+                var email=document.getElementById('Email').value;
+                if(email.trim()===""){
+                    alert("enter the Email");
+                    return false;
+                }
+               
+                $("#saver11").show();
+                $("#saver1").hide();
+            }
+            function validate2(){
+                var mobile=document.getElementById('mobile').value;
+                if(mobile.trim()===""){
+                    alert("enter the mobile number");
+                    return false;
+                }
+               
+                $("#saver11").show();
+                $("#saver2").hide();
+            }
+            function validate3(){
+                var OTP=document.getElementById('otp').value;
+                if(OTP.trim()===""){
+                    alert("enter the OTP");
+                    return false;
+                }
+               
+                $("#saver11").hide();
+                $("#saver22").show();
+            }
+            $(document).ready(function(){
+                $("#otp1").click(function(){
+                    $("#saver1").show();
+                    $("#save").hide();
+                    $(this).hide();
+                })
+            })
+            $(document).ready(function(){
+                $("#otp2").click(function(){
+                    $("#saver2").show();
+                    $("#save").hide();
+                    $(this).hide();
+                })
+            })
+        
+        </script>
+        <style>
+             header {
+            height: 70px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+        #transfer {
+            transform: translate(30px, -60px);
+            background: transparent;
+            font-size: 25px;
+            padding: 5px;
+            border: none;
+            font-family: capriola;
+            border-radius:10px;
+            transition:0.2s;
+
+        }
+        #transfer:hover{
+            box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        }
+        #Menu_bar {
+            background: rgba(128, 128, 128, 0.5);
+            height: 300px;
+            width: 200px;
+            position: absolute;
+            top: 90px;
+            left: -300px;
+            border-radius: 20px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.7);
+        }
+        #Menu_bar ol li{
+        text-align: center;
+       }
+       #Menu_bar ol li a{
+        text-decoration: none;color:black;
+       }
+       #Menu_bar ol li a:hover{
+        color:white
+       }
+            #saver2{
+                width:300px;
+                height:fit-content;
+                padding:20px;
+                text-align:center;
+                box-shadow:0 0 5px rgba(0,0,0,0.5);
+                display:none;
+                border-radius:20px;
+                transform:translate(550px,300px);
+            }
+            #saver11{
+                width:300px;
+                height:fit-content;
+                padding:20px;
+                text-align:center;
+                box-shadow:0 0 5px rgba(0,0,0,0.5);
+                display:none;
+                border-radius:20px;
+                transform:translate(550px,300px);
+            }
+            
+             #saver1{
+                width:300px;
+                height:fit-content;
+                padding:20px;
+                text-align:center;
+                box-shadow:0 0 5px rgba(0,0,0,0.5);
+                display:block;
+                border-radius:20px;
+                transform:translate(550px,300px);
+                display:none;
+            }
+            #save{
+                width:300px;
+                height:fit-content;
+                padding:20px;
+                text-align:center;
+                box-shadow:0 0 5px rgba(0,0,0,0.5);
+                display:block;
+                border-radius:20px;
+                transform:translate(550px,300px);
+            }
+            #saver22{
+                width:200px;
+                height:fit-content;
+                justify-content:center;
+                padding:20px;
+                text-align:center;
+                box-shadow:0 0 5px rgba(0,0,0,0.5);
+                display:none;
+                border-radius:20px;
+                transform:translate(600px,300px);
+            }
+            #saver1 input{width:100%;border:none;box-shadow:inset 2px 2px 5px rgba(0,0,0,0.5);margin:20px 10px;border-radius:15px;font-family:capriola;font-size:20px;padding:5px}
+            #saver1 button{width:100%;border:none;box-shadow:inset 2px 2px 5px rgba(0,0,0,0.5);margin:20px 10px;border-radius:10px;background-color:green;font-family:capriola;font-size:20px;padding:5px;}
+            #saver2 input{width:100%;border:none;box-shadow:inset 2px 2px 5px rgba(0,0,0,0.5);margin:20px 10px;border-radius:15px;font-family:capriola;font-size:20px;padding:5px}
+            #saver2 button{width:100%;border:none;box-shadow:inset 2px 2px 5px rgba(0,0,0,0.5);margin:20px 10px;border-radius:10px;background-color:green;font-family:capriola;font-size:20px;padding:5px;}
+            #saver11 input{width:100%;border:none;box-shadow:inset 2px 2px 5px rgba(0,0,0,0.5);margin:20px 10px;border-radius:15px;font-family:capriola;font-size:20px;padding:5px}
+            #saver11 button{width:100%;border:none;box-shadow:inset 2px 2px 5px rgba(0,0,0,0.5);margin:20px 10px;border-radius:10px;background-color:green;font-family:capriola;font-size:20px;padding:5px;}
+            #saver22 p{font-family:capriola;color:#333;font-size:20px;padding-top:5px;}
+            #save p{font-family:capriola;color:#333;font-size:25px;padding-bottom:5px;}
+            #get{font-family:capriola;color:#333;font-size:20px;padding-top:5px;}
+            #otp1{font-family:capriola;color:rgba(0,0,0,0.4);font-size:20px;padding-top:5px;}
+            #otp1:hover{color:#333;}
+            #otp2{font-family:capriola;color:rgba(0,0,0,0.4);font-size:20px;padding-top:5px;}
+            #otp2:hover{color:#333;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <p style="padding-left: 1100px; padding-top: 20px; font-family: capriola; font-size: 25px;">Capital Distribution</p>
+            <button id="transfer">Menu</button>
+        </header>
+        <div id="Menu_bar"><ol style="list-style-type:none;padding-left:0px;">
+        
+        <li><a href="innovative_assignment1.html">Home</a></li>
+        <li><hr></li>
+        <li><a href="sign.html">Signup</a></li>
+        <li><hr></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><hr></li>
+        </ol></div>
+<div id="save">
+    <p>forgot password ? </p>
+    <h1 id="get">Get back youe Password by<h1 id="otp1">Email Id</h1><h1 id="otp2">Mobile number</h1></h1>
+
+</div>
+<div id="saver1"><input type="text" id="Email" placeholder="Enter Your Email">
+<button onclick="validate1()">Submit</button></div>
+<div id="saver2"><input type="number" id="mobile" placeholder="Enter the Mobile Number">
+<button onclick="validate2()">Submit</button></div>
+<div id="saver11"><input type="number" id="otp" placeholder="Enter the OTP">
+    <button onclick="validate3()">Submit</button></div>
+    <div id="saver22"><P>YOUR PASSWORD IS: Rr123456@</P> </div>
+    </body>
+</html>
